@@ -11,7 +11,7 @@ if(!is_dir($result_dir)){
 		unlink($result_dir);
     mkdir($result_dir, 0777, true);
 }
-$target_file = md5_file($_FILES["fileToUpload"]["name"]);
+$target_file = md5_file($_FILES["fileToUpload"]["tmp_name"]);
 $target_path = $target_dir.'/'.$target_file;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo(basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION));
