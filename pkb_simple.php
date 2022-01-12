@@ -177,8 +177,8 @@ if(!isset($_GET['nopol']) || empty($_GET['nopol']) || is_null($api->format($_GET
 else{
 	$nopol = $api->format($_GET['nopol']);
 	if($nopol[0]=='A' && $nopol[1]=='B'){
-		$api->pkbjatim($nopol);
-	}else{
 		$api->pkbjogja($nopol);
+	}else{
+		$api->pkbjatim($nopol);
 	}
 }
